@@ -1,24 +1,59 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+# google github omniauth starter
 
 * Ruby version
+  ```
+  ruby 3.0.0
+  ```
 
-* System dependencies
+* Rails version
+  ```
+  Rails 6.1.3.1
+  ```
 
-* Configuration
+# Installation
 
-* Database creation
+## Prerequisites
+- [Ruby](https://rvm.io/)
+- [NodeJS (>=10.x)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
+- [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
+- [PostgreSQL](https://www.postgresql.org/download/)
 
-* Database initialization
 
-* How to run the test suite
+## Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+- Install GEM dependencies:
 
-* Deployment instructions
+  ```bash
+  bundle install
+  ```
 
-* ...
+- Install asset dependencies:
+
+  ```bash
+  rails webpacker:install
+  ```
+
+- Create database, migrate tables and run the seed data:
+
+  ```bash
+  rails db:create
+  rails db:migrate
+  rails db:seed
+  ```
+
+- If you are setting up again, when you already have previous databases:
+
+  ```bash
+  rails db:reset
+  ```
+- For dropping database
+  ```bash
+  rails db:drop
+  ```
+
+- Create environment variables for omniauth providers, Create a file named "config/application.yml" and fill its contents as follows
+  
+  ```yml
+  OA_GOOGLE_CLIENT_ID: 'XXX'
+  OA_GOOGLE_SECRET_KEY: 'XXX'
+  ```
