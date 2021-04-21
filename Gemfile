@@ -29,6 +29,7 @@ gem 'devise', github: 'heartcombo/devise', branch: 'master'
 
 # omniauths
 gem 'omniauth-google-oauth2'
+gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 gem 'omniauth-rails_csrf_protection'
 
 # Reduces boot times through caching; required in config/boot.rb
